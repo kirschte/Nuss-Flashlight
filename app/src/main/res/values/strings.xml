@@ -1,0 +1,11 @@
+<resources>
+    <string name="app_name">Nuss-Taschenlampe</string>
+    <string name="status_leer">Die Verfügbarkeit des Blitzes wird detektiert...</string>
+    <string name="status_true">Blitz: Verfügbar</string>
+    <string name="status_false">Blitz: NICHT Verfügbar</string>
+    <color name="dirtygold">#1A1A1A</color>
+    <color name="niceblue">#8D8C8C</color>
+    <string name="start">An</string>
+    <string name="stop">Aus</string>
+    <string name="nuss">&#169; powered by Nuss Inc. Corp.</string>
+</resources>
