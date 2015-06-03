@@ -6,6 +6,8 @@ Coming Soon:
 - Morsen (SOS + Buchstaben via Input)
 
 
+0.1.5:
+* Added a flash light
 
 0.1:
 * Initial Release
