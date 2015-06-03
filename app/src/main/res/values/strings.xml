@@ -8,4 +8,6 @@
     <string name="start">An</string>
     <string name="stop">Aus</string>
     <string name="nuss">&#169; powered by Nuss Inc. Corp.</string>
+    <string name="flash_on">Flackern einschalten</string>
+    <string name="flash_off">Flackern ausschalten</string>
 </resources>

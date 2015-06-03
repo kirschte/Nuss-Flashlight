@@ -28,10 +28,36 @@
             android:layout_alignParentTop="true"
             android:layout_alignParentLeft="true"
             android:layout_alignParentStart="true">
-            <TextView android:text="@string/nuss" android:id="@+id/nuss" android:layout_width="wrap_content"
-                android:layout_height="wrap_content" android:textColor="@color/niceblue"
+            <TextView
+                android:text="@string/nuss"
+                android:id="@+id/nuss" android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/niceblue"
                 android:layout_alignParentBottom="true"
                 android:textSize="@dimen/abc_dropdownitem_text_padding_right" />
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentLeft="true"
+            android:layout_marginTop="50dp">
+
+            <CheckBox
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/flash_on"
+                android:id="@+id/checkFlackern"
+                android:textColor="@color/niceblue"
+                android:singleLine="false"
+                android:layout_alignParentBottom="true"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true"
+                android:layout_marginBottom="140dp"
+                android:layout_alignParentTop="false"
+                android:layout_alignParentRight="false" />
         </RelativeLayout>
     </RelativeLayout>
 
