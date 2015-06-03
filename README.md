@@ -11,6 +11,8 @@ an advertising-free flash light app for Android
 - Morsen (SOS + Buchstaben via Input)
 
 
+
+
 0.1.5:
 * Added a flash light
 
