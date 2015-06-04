@@ -3,14 +3,17 @@ an advertising-free flash light app for Android
 
 ## Features:
 - flash on/off
-- blinking flash
+- "flash fire" (blinking flash) via chossing an individual frequency
 
 
 ## Coming Soon:
-- Flackerlicht mit TrackBar (zum Einstellen der Freuquenz)
 - Morsen (SOS + Buchstaben via Input)
 
 ##Version History
+
+0.2.0
+* Added "flash fire" accesable via a SeekBar
+
 0.1.5:
 * Added a flash light
 
