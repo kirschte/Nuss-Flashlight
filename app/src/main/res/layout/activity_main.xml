@@ -13,14 +13,20 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:layout_gravity="center">
-            <Button android:layout_width="100dp" android:layout_height="100dp" android:id="@+id/buttonStart" android:text="@string/start"
+            <Button android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:id="@+id/buttonStart"
+                android:text="@string/start"
                 android:layout_marginTop="100dp"
                 android:layout_alignParentTop="true"
                 android:layout_centerHorizontal="true"
                 android:layout_centerVertical="true"
                 android:background = "@drawable/roundedbutton" />
-            <TextView android:text="@string/status_leer" android:id="@+id/status" android:layout_width="wrap_content"
-                android:layout_height="wrap_content" android:textColor="@color/niceblue"/>
+            <TextView android:text="@string/status_leer"
+                android:id="@+id/status"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/niceblue"/>
         <RelativeLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"
@@ -35,6 +41,15 @@
                 android:textColor="@color/niceblue"
                 android:layout_alignParentBottom="true"
                 android:textSize="@dimen/abc_dropdownitem_text_padding_right" />
+            <TextView
+                android:text="@string/version"
+                android:id="@+id/build" android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/niceblue"
+                android:layout_alignParentBottom="true"
+                android:textSize="@dimen/abc_edit_text_inset_bottom_material"
+                android:layout_toRightOf="@+id/nuss"
+                android:layout_marginLeft="5dp" />
 
         </RelativeLayout>
 
@@ -58,6 +73,43 @@
                 android:layout_marginBottom="140dp"
                 android:layout_alignParentTop="false"
                 android:layout_alignParentRight="false" />
+
+            <SeekBar
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/seekFlackern"
+                android:layout_alignParentBottom="false"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true"
+                android:layout_marginStart="64dp"
+                android:layout_alignParentRight="false"
+                android:layout_alignWithParentIfMissing="false"
+                android:layout_alignParentTop="false"
+                android:layout_marginLeft="5dp"
+                android:layout_alignTop="@+id/checkFlackern"
+                android:layout_marginTop="40dp"
+                android:max="499"
+                android:progress="100" />
+            <TextView
+                android:text="@string/frequency"
+                android:id="@+id/frequency" android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/niceblue"
+                android:layout_alignParentBottom="false"
+                android:layout_marginLeft="40dp"
+                android:layout_alignTop="@+id/seekFlackern"
+                android:layout_alignParentLeft="true"
+                android:layout_marginTop="35dp" />
+            <TextView
+                android:text="@string/frequency_standart_value"
+                android:id="@+id/frequency_value" android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/niceblue"
+                android:layout_alignParentBottom="false"
+                android:layout_alignParentLeft="false"
+                android:layout_alignTop="@+id/frequency"
+                android:layout_toRightOf="@+id/frequency"
+                android:layout_marginLeft="5dp" />
         </RelativeLayout>
     </RelativeLayout>
 

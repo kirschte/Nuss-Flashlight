@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="flash_off">Flackern ausschalten</string>
+    <string name="flash_on">Flackern einschalten</string>
+    <string name="frequency">Frequenz:</string>
+    <string name="start">An</string>
+    <string name="status_false">Blitz: NICHT Verfügbar</string>
+    <string name="status_leer">Die Verfügbarkeit des Blitzes wird detektiert&#8230;</string>
+    <string name="status_true">Blitz: Verfügbar</string>
+    <string name="stop">Aus</string>
+    <string name="app_name">Nuss-Tachenlampe</string>
+</resources>

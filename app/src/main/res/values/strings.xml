@@ -1,13 +1,20 @@
 <resources>
-    <string name="app_name">Nuss-Taschenlampe</string>
-    <string name="status_leer">Die Verfügbarkeit des Blitzes wird detektiert...</string>
-    <string name="status_true">Blitz: Verfügbar</string>
-    <string name="status_false">Blitz: NICHT Verfügbar</string>
+    <string name="app_name">Nuss-Flashlight</string>
+
     <color name="dirtygold">#1A1A1A</color>
     <color name="niceblue">#8D8C8C</color>
-    <string name="start">An</string>
-    <string name="stop">Aus</string>
-    <string name="nuss">&#169; powered by Nuss Inc. Corp.</string>
-    <string name="flash_on">Flackern einschalten</string>
-    <string name="flash_off">Flackern ausschalten</string>
+
+    <string name="status_leer">Detection the availability of the flash&#8230;</string>
+    <string name="status_true">Flash: available</string>
+    <string name="status_false">Flash: NOT available</string>
+
+    <string name="start">On</string>
+    <string name="stop">Off</string>
+    <string name="flash_on">turn on "flash fire"</string>
+    <string name="flash_off">turn off "flash fire"</string>
+    <string name="frequency">Frequency:</string>
+    <string name="frequency_standart_value" translatable="false">5.00Hz</string>
+
+    <string name="nuss" translatable="false">&#169; powered by Nuss Inc. Corp.</string>
+    <string name="version" translatable="false">1.1.0 „Nuss“</string>
 </resources>
