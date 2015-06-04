@@ -8,6 +8,7 @@ an advertising-free flash light app for Android
 
 ## Coming Soon:
 - Morsen (SOS + Buchstaben via Input)
+- Credits + License
 
 ##Version History
 
