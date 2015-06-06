@@ -8,7 +8,7 @@ an advertising-free flash light app for Android
 
 ## Coming Soon:
 - Morsen (SOS + Buchstaben via Input)
-- Credits + License
+- Credits + License + "Benutzung auf eigene Gefahr --> Haftungsausschluss in App"
   
 ##Version History
 
