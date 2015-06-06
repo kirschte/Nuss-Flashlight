@@ -5,10 +5,9 @@ an advertising-free flash light app for Android
 - flash on/off
 - "flash fire" (blinking flash) via chossing an individual frequency
 
+## Current stable Version:
+- V. 0.2: https://github.com/moritzmoritz98/Nuss-Flashlight/blob/master/app/app-release.apk?raw=true
 
-## Coming Soon:
-- Morsen (SOS + Buchstaben via Input)
-- Credits + License + "Benutzung auf eigene Gefahr --> Haftungsausschluss in App"
   
 ##Version History
 
