@@ -6,7 +6,7 @@ an advertising-free flash light app for Android
 - "flash fire" (blinking flash) via chossing an individual frequency
 
 ## Current stable Version:
-[Download version 0.2] (https://github.com/moritzmoritz98/Nuss-Flashlight/blob/master/app/Nuss-flashlight_0.2.0_RELEASE.apk?raw=true)
+[Download version 0.2.0] (https://github.com/moritzmoritz98/Nuss-Flashlight/blob/master/app/Nuss-flashlight_0.2.0_RELEASE.apk?raw=true)
 
   
 ##Version History
