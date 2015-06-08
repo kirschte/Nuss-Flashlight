@@ -1,7 +1,9 @@
 package com.teanesh.company.taschenlampe;
 
 import android.content.Context;
+import android.content.pm.ActivityInfo;
 import android.content.pm.PackageManager;
+import android.content.res.Configuration;
 import android.os.SystemClock;
 import android.support.v7.app.ActionBarActivity;
 import android.os.Bundle;
@@ -9,14 +11,15 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.CheckBox;
 import android.widget.SeekBar;
+import android.widget.TabHost;
 import android.widget.TextView;
 import android.hardware.Camera;
 import android.hardware.Camera.Parameters;
 
 
 public class MainActivity extends ActionBarActivity {
-    public TextView mText;
     public static Camera cam = null;
+    public TextView mText;
     public boolean onoffthenuss = true;
     public boolean flackeronoff = true;
     public boolean flackeronoffloop = false;
@@ -71,6 +74,19 @@ public class MainActivity extends ActionBarActivity {
         /* Grafik: */
         buttonText = buttonClick;
         setgraphic();
+        //Set Tabs by https://www.youtube.com/watch?v=irDdBxamuZs
+        TabHost tabHost = (TabHost) findViewById(R.id.tabHost);
+        tabHost.setup();
+        //Tab 1
+        TabHost.TabSpec tabSpec = tabHost.newTabSpec("flash");
+        tabSpec.setContent(R.id.tabflash);
+        tabSpec.setIndicator(getString(R.string.flash));
+        tabHost.addTab(tabSpec);
+        //Tab 2
+        tabSpec = tabHost.newTabSpec("morsen");
+        tabSpec.setContent(R.id.tabmorsen);
+        tabSpec.setIndicator(getString(R.string.morsen));
+        tabHost.addTab(tabSpec);
 
     }
 
@@ -156,5 +172,13 @@ public class MainActivity extends ActionBarActivity {
         Thread mythread = new Thread(runnable);
         mythread.start();
     }
+
+    @Override
+    public void onConfigurationChanged(Configuration newConfig)
+    {
+        super.onConfigurationChanged(newConfig);
+        setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_PORTRAIT);
+    }
+
 }
 

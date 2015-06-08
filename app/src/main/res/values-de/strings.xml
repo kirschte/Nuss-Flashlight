@@ -9,4 +9,6 @@
     <string name="status_true">Blitz: Verfügbar</string>
     <string name="stop">Aus</string>
     <string name="app_name">Nuss-Tachenlampe</string>
+    <string name="flash">Blitz</string>
+    <string name="morsen">Morsen</string>
 </resources>

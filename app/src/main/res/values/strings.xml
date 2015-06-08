@@ -3,6 +3,7 @@
 
     <color name="dirtygold">#1A1A1A</color>
     <color name="niceblue">#8D8C8C</color>
+    <color name="button">#EEFFFF</color>
 
     <string name="status_leer">Detection the availability of the flash&#8230;</string>
     <string name="status_true">Flash: available</string>
@@ -16,5 +17,7 @@
     <string name="frequency_standart_value" translatable="false">5.00Hz</string>
 
     <string name="nuss" translatable="false">&#169; powered by Nuss Inc. Corp.</string>
-    <string name="version" translatable="false">1.1.0 „Nuss“</string>
+    <string name="version" translatable="false">0.2.0 „Nuss“</string>
+    <string name="flash">Flash</string>
+    <string name="morsen">Morsen</string>
 </resources>
