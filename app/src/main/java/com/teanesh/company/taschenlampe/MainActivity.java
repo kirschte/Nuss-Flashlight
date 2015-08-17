@@ -1,6 +1,5 @@
 package com.teanesh.company.taschenlampe;
 
-import android.app.Activity;
 import android.content.Context;
 import android.content.pm.ActivityInfo;
 import android.content.pm.PackageManager;
@@ -9,7 +8,7 @@ import android.hardware.Camera;
 import android.hardware.Camera.Parameters;
 import android.os.Bundle;
 import android.os.SystemClock;
-import android.support.v7.app.ActionBarActivity;
+import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.view.WindowManager;
 import android.widget.Button;
@@ -19,7 +18,7 @@ import android.widget.TabHost;
 import android.widget.TextView;
 
 
-public class MainActivity extends ActionBarActivity {
+public class MainActivity extends AppCompatActivity {
     public static Camera cam = null;
     public TextView mText;
     public boolean onoffthenuss = true;
@@ -40,7 +39,7 @@ public class MainActivity extends ActionBarActivity {
         buttonClick.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                MainActivity.this.lamp();
+                MainActivity.this.beforelamp();
             }
         });
         /* EventListener f&uuml;r die CheckBox f&uuml;r das Flackern */
@@ -48,7 +47,7 @@ public class MainActivity extends ActionBarActivity {
         checkClick.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                MainActivity.this.flacker();
+                MainActivity.this.beforeflacker();flacker();
             }
         });
          /* EventListener zum Setzen der Freuenzy f&uuml;r das Flackern */
@@ -116,6 +115,16 @@ public class MainActivity extends ActionBarActivity {
         }
     }
 
+    private void beforelamp() { //checkt, ob die Taschenlampe bereits flackert, wenn ja, dann mache sie aus und mache die Lampe an.
+        if (flackeronoff) {
+            lamp();
+        } else {
+            flacker();
+            SystemClock.sleep(1000); //damit das Flackern in Ruhe ausgehen kann...
+            lamp();
+        }
+    }
+
     private void lamp() {
         if (getPackageManager().hasSystemFeature(PackageManager.FEATURE_CAMERA_FLASH)) {
             if (onoffthenuss) {
@@ -133,6 +142,15 @@ public class MainActivity extends ActionBarActivity {
                 onoffthenuss = true;
                 buttonText.setText(R.string.start);
             }
+        }
+    }
+
+    private void beforeflacker() {
+        if (onoffthenuss) {//checkt, ob die Taschenlampe bereits leuchtet, wenn ja, dann mache sie aus und mache das Flackern an.
+            flacker();
+        } else {
+            lamp();
+            flacker();
         }
     }
 
@@ -164,18 +182,18 @@ public class MainActivity extends ActionBarActivity {
                             }
                             cam.release();
                             cam = null;
-                        } else {
-                            flackeronoffloop = false;
-                            flackeronoff = true;
                             runOnUiThread(new Runnable() {
                                 @Override
                                 public void run() {
                                     checkFlackern.setText(R.string.flash_on);
                                 }
                             });
+                        } else {
+                            flackeronoffloop = false;
+                            flackeronoff = true;
                         }
                     }
-                } catch(Exception e) {}
+                } catch(Exception ignored) {}
             }
         };
         Thread mythread = new Thread(runnable);
