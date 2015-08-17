@@ -1,20 +1,22 @@
 package com.teanesh.company.taschenlampe;
 
+import android.app.Activity;
 import android.content.Context;
 import android.content.pm.ActivityInfo;
 import android.content.pm.PackageManager;
 import android.content.res.Configuration;
+import android.hardware.Camera;
+import android.hardware.Camera.Parameters;
+import android.os.Bundle;
 import android.os.SystemClock;
 import android.support.v7.app.ActionBarActivity;
-import android.os.Bundle;
 import android.view.View;
+import android.view.WindowManager;
 import android.widget.Button;
 import android.widget.CheckBox;
 import android.widget.SeekBar;
 import android.widget.TabHost;
 import android.widget.TextView;
-import android.hardware.Camera;
-import android.hardware.Camera.Parameters;
 
 
 public class MainActivity extends ActionBarActivity {
@@ -88,6 +90,13 @@ public class MainActivity extends ActionBarActivity {
         tabSpec.setIndicator(getString(R.string.morsen));
         tabHost.addTab(tabSpec);
 
+        /**
+         * This Activity keeps the screen on using the window manager, you don't have to worry about managing this
+         * it will be kept on for the duration of the Activity life.
+         * No permissions are needed in your manifest.
+         */
+        getWindow().addFlags(WindowManager.LayoutParams.FLAG_KEEP_SCREEN_ON);
+        getWindow().addFlags(WindowManager.LayoutParams.FLAG_SHOW_WHEN_LOCKED);
     }
 
     private void setgraphic() {
