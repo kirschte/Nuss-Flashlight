@@ -50,7 +50,7 @@ public class MainActivity extends AppCompatActivity {
                 MainActivity.this.beforeflacker();flacker();
             }
         });
-         /* EventListener zum Setzen der Freuenzy f&uuml;r das Flackern */
+         /* EventListener zum Setzen der Freuency f&uuml;r das Flackern */
         final SeekBar changeSeek = (SeekBar) findViewById(R.id.seekFlackern);
         Flackerwert_object = (TextView) findViewById(R.id.frequency_value);     //z.B. 5Hz
         changeSeek.setOnSeekBarChangeListener(new SeekBar.OnSeekBarChangeListener() {
@@ -120,6 +120,7 @@ public class MainActivity extends AppCompatActivity {
             lamp();
         } else {
             flacker();
+            checkFlackern.setChecked(false);
             SystemClock.sleep(1000); //damit das Flackern in Ruhe ausgehen kann...
             lamp();
         }
