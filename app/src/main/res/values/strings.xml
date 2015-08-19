@@ -20,4 +20,8 @@
     <string name="version" translatable="false">0.2.0 „Nuss“</string>
     <string name="flash">Flash</string>
     <string name="morsen">Morsen</string>
+    <string name="setting">Settings</string>
+    <string name="credits">Credits</string>
+    <string name="setting_pressed">Setting successfully opened</string>
+    <string name="credits_pressed">Credits successfully opened</string>
 </resources>

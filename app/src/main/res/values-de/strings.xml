@@ -11,4 +11,8 @@
     <string name="app_name">Nuss-Tachenlampe</string>
     <string name="flash">Blitz</string>
     <string name="morsen">Morsen</string>
+    <string name="credits">Credits</string>
+    <string name="credits_pressed">Credits erfolreich geöffnet</string>
+    <string name="setting">Einstellungen</string>
+    <string name="setting_pressed">Einstellungen erfolgreich geöffnet</string>
 </resources>
