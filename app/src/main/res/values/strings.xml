@@ -22,6 +22,7 @@
     <string name="morsen">Morsen</string>
     <string name="setting">Settings</string>
     <string name="credits">Credits</string>
+    <string name="date" translatable="false">2015-08-19</string>
     <string name="setting_pressed">Setting successfully opened</string>
     <string name="credits_pressed">Credits successfully opened</string>
 </resources>

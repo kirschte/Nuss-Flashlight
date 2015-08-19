@@ -68,7 +68,8 @@
                                 android:layout_height="wrap_content"
                                 android:textColor="@color/niceblue"
                                 android:layout_alignParentBottom="true"
-                                android:textSize="@dimen/abc_dropdownitem_text_padding_right" />
+                                android:textSize="@dimen/abc_dropdownitem_text_padding_right"
+                                android:layout_marginLeft="1dp" />
                             <TextView
                                 android:text="@string/version"
                                 android:id="@+id/build" android:layout_width="wrap_content"
@@ -78,6 +79,16 @@
                                 android:textSize="@dimen/abc_edit_text_inset_bottom_material"
                                 android:layout_toRightOf="@+id/nuss"
                                 android:layout_marginLeft="5dp" />
+                            <TextView
+                                android:text="@string/date"
+                                android:id="@+id/date" android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:textColor="@color/niceblue"
+                                android:layout_alignParentBottom="true"
+                                android:textSize="@dimen/abc_button_inset_vertical_material"
+                                android:layout_alignParentRight="true"
+                                android:layout_alignParentLeft="false"
+                                android:layout_marginRight="1dp" />
 
                         </RelativeLayout>
 
