@@ -1,6 +1,7 @@
 package com.teanesh.company.taschenlampe;
 
 import android.content.Context;
+import android.content.Intent;
 import android.content.pm.ActivityInfo;
 import android.content.pm.PackageManager;
 import android.content.res.Configuration;
@@ -32,6 +33,7 @@ public class MainActivity extends AppCompatActivity {
     public CheckBox checkFlackern;
     public TextView Flackerwert_object;
     public double Flackerwert_frequenz;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -50,7 +52,8 @@ public class MainActivity extends AppCompatActivity {
         checkClick.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                MainActivity.this.beforeflacker();flacker();
+                MainActivity.this.beforeflacker();
+                flacker();
             }
         });
          /* EventListener zum Setzen der Freuency f&uuml;r das Flackern */
@@ -59,10 +62,10 @@ public class MainActivity extends AppCompatActivity {
         changeSeek.setOnSeekBarChangeListener(new SeekBar.OnSeekBarChangeListener() {
             @Override
             public void onProgressChanged(SeekBar seekBar, int progress, boolean fromUser) {
-                sleepi = changeSeek.getProgress()+1;
-                Flackerwert_frequenz = 1000.0/(sleepi*2.0)+0.0005;
-                Flackerwert_frequenz = (int) (Flackerwert_frequenz*100.0);
-                Flackerwert_object.setText(Double.toString( Flackerwert_frequenz / 100.0)+"Hz");
+                sleepi = changeSeek.getProgress() + 1;
+                Flackerwert_frequenz = 1000.0 / (sleepi * 2.0) + 0.0005;
+                Flackerwert_frequenz = (int) (Flackerwert_frequenz * 100.0);
+                Flackerwert_object.setText(Double.toString(Flackerwert_frequenz / 100.0) + "Hz");
             }
 
             @Override
@@ -103,7 +106,7 @@ public class MainActivity extends AppCompatActivity {
 
     private void setgraphic() {
          /* Setzt die von der Bildschirmgr&ouml;&szlig;e abh&auml;ngende H&ouml;he/Breite des Buttons UND CheckBox */
-        android.view.Display display = ((android.view.WindowManager)getSystemService(Context.WINDOW_SERVICE)).getDefaultDisplay();
+        android.view.Display display = ((android.view.WindowManager) getSystemService(Context.WINDOW_SERVICE)).getDefaultDisplay();
         buttonText.setHeight((int) (display.getHeight() * 0.68));
         buttonText.setWidth((int) (display.getWidth() * 0.50));
         checkFlackern = (CheckBox) findViewById(R.id.checkFlackern);
@@ -121,7 +124,7 @@ public class MainActivity extends AppCompatActivity {
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         // Inflate the menu; this adds items to the bar if it is present.
-        getMenuInflater().inflate(R.menu.menu_main,menu);
+        getMenuInflater().inflate(R.menu.menu_main, menu);
         return true;
     }
 
@@ -134,9 +137,11 @@ public class MainActivity extends AppCompatActivity {
 
         switch (id) {
             case R.id.action_settings:
+                startActivity(new Intent(MainActivity.this, SettingsActivity.class));
                 Toast.makeText(getApplicationContext(), R.string.setting_pressed, Toast.LENGTH_SHORT).show();
                 break;
             case R.id.action_credits:
+                startActivity(new Intent(MainActivity.this, credits.class));
                 Toast.makeText(getApplicationContext(), R.string.credits_pressed, Toast.LENGTH_SHORT).show();
                 break;
         }
@@ -144,9 +149,6 @@ public class MainActivity extends AppCompatActivity {
 
         return super.onOptionsItemSelected(item);
     }
-
-
-
 
 
     private void beforelamp() { //checkt, ob die Taschenlampe bereits flackert, wenn ja, dann mache sie aus und mache die Lampe an.
@@ -228,7 +230,8 @@ public class MainActivity extends AppCompatActivity {
                             flackeronoff = true;
                         }
                     }
-                } catch(Exception ignored) {}
+                } catch (Exception ignored) {
+                }
             }
         };
         Thread mythread = new Thread(runnable);
@@ -236,8 +239,7 @@ public class MainActivity extends AppCompatActivity {
     }
 
     @Override
-    public void onConfigurationChanged(Configuration newConfig)
-    {
+    public void onConfigurationChanged(Configuration newConfig) {
         super.onConfigurationChanged(newConfig);
         setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_PORTRAIT);
     }

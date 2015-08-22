@@ -12,7 +12,13 @@
     <string name="flash">Blitz</string>
     <string name="morsen">Morsen</string>
     <string name="credits">Credits</string>
-    <string name="credits_pressed">Credits erfolreich geöffnet</string>
+    <string name="credits_pressed">Credits erfolgreich geöffnet</string>
     <string name="setting">Einstellungen</string>
     <string name="setting_pressed">Einstellungen erfolgreich geöffnet</string>
+    <string name="title_activity_settings">Einstellungen</string>
+    <string name="disclaimer_pattern">Der Autor dieses Programms haftet nicht für Schäden an Soft- oder Hardware oder Vermögensschäden, die durch das Benutzen des Programms entstehen, es sei denn diese beruhen auf einem grob fahrlässigen oder vorsätzlichen Handeln des Autors, seiner Erfüllungsgehilfen oder seiner gesetzlichen Vertreter. Für  Schäden an der Gesundheit, dem Körper oder dem Leben des Nutzers haftet der Autor uneingeschränkt. Ebenso haftet er für die Verletzung von Pflichten, die zur Erreichung des Vertragszwecks von besonderer Bedeutung sind.</string>
+    <string name="disclaimer_pattern_headline">Haftungsauschluss:</string>
+    <string name="license_headline">Diese Software ist unter GPLv2 lizenziert:</string>
+    <string name="creator">Diese Application wurde ausschließlich von Moritz Kirschte und Finn Krauss entwickelt und designed.</string>
+    <string name="website_headline">Mehr Informationen sind auf unserer Projektwebsite erhältlich:</string>
 </resources>
