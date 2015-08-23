@@ -1,5 +1,7 @@
 ## Nuss-Flashlight
-an advertising-free flash light app for Android by Moritz Kirschte and Finn Krauß
+an advertising-free flash light app for Android by Moritz Kirschte and Finn Krauß.
+
+<img src="https://cloud.githubusercontent.com/assets/12673666/9428261/e33f5c7c-49a6-11e5-8703-cbfd6207ce0d.png" width="240" height="400" alt="Screenshot"/>
 
 ## Features:
 - flash on/off
