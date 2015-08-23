@@ -33,6 +33,7 @@ public class MainActivity extends AppCompatActivity {
     public CheckBox checkFlackern;
     public TextView Flackerwert_object;
     public double Flackerwert_frequenz;
+    public int delay = 0;   //Holt sich die "echte" Dauer eines Durchlaufs beim Flackern, um die Frequenz zu berechnen
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -63,9 +64,9 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onProgressChanged(SeekBar seekBar, int progress, boolean fromUser) {
                 sleepi = changeSeek.getProgress() + 1;
-                Flackerwert_frequenz = 1000.0 / (sleepi * 2.0) + 0.0005;
+                Flackerwert_frequenz = 1000.0 / (sleepi * 2.0 + delay) + 0.0005;
                 Flackerwert_frequenz = (int) (Flackerwert_frequenz * 100.0);
-                Flackerwert_object.setText(Double.toString(Flackerwert_frequenz / 100.0) + "Hz");
+                Flackerwert_object.setText("~" + Double.toString(Flackerwert_frequenz / 100.0) + "Hz");
             }
 
             @Override
@@ -183,7 +184,7 @@ public class MainActivity extends AppCompatActivity {
     }
 
     private void beforeflacker() {
-        if (onoffthenuss) {//checkt, ob die Taschenlampe bereits leuchtet, wenn ja, dann mache sie aus und mache das Flackern an.
+        if (onoffthenuss) { //checkt, ob die Taschenlampe bereits leuchtet, wenn ja, dann mache sie aus und mache das Flackern an.
             flacker();
         } else {
             lamp();
@@ -194,6 +195,8 @@ public class MainActivity extends AppCompatActivity {
     private void flacker() {
         Runnable runnable = new Runnable() {
             public void run() {
+                long timerstart;
+                long timerend;
                 try {
                     if (getPackageManager().hasSystemFeature(PackageManager.FEATURE_CAMERA_FLASH)) {
                         if (flackeronoff) {
@@ -205,6 +208,31 @@ public class MainActivity extends AppCompatActivity {
                             });
                             cam = Camera.open();
                             Parameters p = cam.getParameters();
+                            //Beim ersten mal wird der "Delay" ermittelt!
+                            //START BLOCK 1
+                            if (delay == 0) {
+                                for (int i = 0; i < 10; i++) {
+                                    timerstart = System.currentTimeMillis();
+                                    p.setFlashMode(Parameters.FLASH_MODE_OFF);
+                                    cam.setParameters(p);
+                                    cam.startPreview();
+                                    p.setFlashMode(Parameters.FLASH_MODE_OFF);
+                                    cam.setParameters(p);
+                                    cam.stopPreview();
+                                    timerend = System.currentTimeMillis();
+                                    delay = (int) (delay + timerend - timerstart);
+                                }
+                                delay = delay / 10;
+                                runOnUiThread(new Runnable() {
+                                    @Override
+                                    public void run() {
+                                        final SeekBar changeSeek = (SeekBar) findViewById(R.id.seekFlackern);
+                                        changeSeek.setProgress(101); //zum manuellen Auslösen des EventListeners der Seekbar, damit die Frequenz mit dem delay berechnet gesetzt wird.
+                                        changeSeek.setProgress(100);
+                                    }
+                                });
+                            }
+                            //ENDE BLOCK 1
                             flackeronoff = false;
                             flackeronoffloop = true;
                             while (flackeronoffloop) {

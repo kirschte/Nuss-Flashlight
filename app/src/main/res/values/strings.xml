@@ -15,7 +15,7 @@
     <string name="flash_on">turn on "flash fire"</string>
     <string name="flash_off">turn off "flash fire"</string>
     <string name="frequency">Frequency:</string>
-    <string name="frequency_standart_value" translatable="false">5.00Hz</string>
+    <string name="frequency_standart_value" translatable="false">~5.00Hz</string>
 
     <string name="nuss" translatable="false">&#169; powered by Nuss Inc. Corp.</string>
     <string name="version" translatable="false">0.2.0 „Nuss“</string>
@@ -23,7 +23,7 @@
     <string name="morsen">Morsen</string>
     <string name="setting">Settings</string>
     <string name="credits">Credits</string>
-    <string name="date" translatable="false">2015&#8211;08&#8211;22</string>
+    <string name="date" translatable="false">2015&#8211;08&#8211;23</string>
     <string name="setting_pressed">Setting successfully opened</string>
     <string name="credits_pressed">Credits successfully opened</string>
 
