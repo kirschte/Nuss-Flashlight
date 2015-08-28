@@ -18,7 +18,7 @@
     <string name="frequency_standart_value" translatable="false">~5.00Hz</string>
 
     <string name="nuss" translatable="false">&#169; powered by Nuss Inc. Corp.</string>
-    <string name="version" translatable="false">0.2.0 „Nuss“</string>
+    <string name="version" translatable="false">0.2.1 „Nuss“</string>
     <string name="flash">Flash</string>
     <string name="morsen">Morsen</string>
     <string name="setting">Settings</string>
