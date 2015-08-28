@@ -8,7 +8,7 @@ an advertising-free flash light app for Android by Moritz Kirschte and Finn Krau
 - "flash fire" (blinking flash) via chossing an individual frequency
 
 ## Current stable Version:
-[Download: Version 0.2.0] (https://github.com/moritzmoritz98/Nuss-Flashlight/blob/master/app/Nuss-flashlight_0.2.0_RELEASE.apk?raw=true)
+[Download: Version 0.2.1] (https://github.com/moritzmoritz98/Nuss-Flashlight/blob/master/app/Nuss-flashlight_0.2.1_RELEASE.apk?raw=true)
 
   
 ##Version History
