@@ -9,3 +9,5 @@ an advertising-free flash light app for Android by Moritz Kirschte and Finn Krau
 
 ## Current stable Version:
 [Download: Version 0.2.1] (https://github.com/moritzmoritz98/Nuss-Flashlight/blob/master/app/Nuss-flashlight_0.2.1_RELEASE.apk?raw=true)
+MD5:  3315c9b011165cabeb812ff553601863
+SHA1: dc482f901b0f66fdde92064f512572cfcb8563ee
